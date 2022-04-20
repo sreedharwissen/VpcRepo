@@ -1,0 +1,10 @@
+Resources:
+  mySubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !ImportValue 'test-vpc:VPC'
+      CidrBlock: 10.0.0.0/24
+      AvailabilityZone: "ap-southeast-2a"
+      Tags:
+      - Key: stack
+        Value: production
