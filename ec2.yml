@@ -1,5 +1,5 @@
 --- 
-Resource: 
+Resources: 
   MyInstance: 
     Properties: 
       AvailabilityZone: us-east-1a
