@@ -29,3 +29,6 @@ phases:
       - sam package --template-file $TEMPLATE --output-template-file emr_cluster.yml
       - pwd
       - ls -ltrh
+      - git add .
+      - git commit -m "commit codebuild output artifacts"
+      - git push origin main
