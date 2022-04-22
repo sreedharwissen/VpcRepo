@@ -41,8 +41,7 @@ Parameters:
     Description: >-
       Please select which application will be installed on the cluster this
       would be either Ganglia and spark, or Ganglia and s3 backed Hbase
-    Type: String
-    Default: Spark
+    Type: List of String
     AllowedValues:
       - Spark
       - Hbase
