@@ -27,4 +27,5 @@ phases:
       # EMR is not a serverless service. However, doing this allows us to mix Step, Lambda, etc. in the same template later. 
       - sam build -t $TEMPLATE
       - sam package --template-file $TEMPLATE --output-template-file emr_cluster.yml
-      - cp emr_cluster.yml fileb://
+      - pwd
+      - ls -ltrh
