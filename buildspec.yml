@@ -22,7 +22,7 @@ phases:
 
 
       # Validate SAM template. If using SAM, keep this.
-      - sam validate --template EMR_CLUSTER.yml
+      - aws cloudformation validate-template --template-body file://EMR_CLUSTER.yml
 
       # EMR is not a serverless service. However, doing this allows us to mix Step, Lambda, etc. in the same template later. 
       - sam build -t $TEMPLATE
