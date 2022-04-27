@@ -22,18 +22,10 @@ phases:
 
 
       # Validate SAM template. If using SAM, keep this.
-      - aws cloudformation validate-template --template-body file://EMR_CLUSTER.yml
+      - aws cloudformation validate-template --template-body file://emr.yml
 
       # EMR is not a serverless service. However, doing this allows us to mix Step, Lambda, etc. in the same template later. 
       - sam build -t $TEMPLATE
       - sam package --template-file $TEMPLATE --output-template-file emr_cluster.yml
       - pwd
       - ls -ltrh
-#       - git clone https://github.com/sreedharwissen/VpcRepo.git
-#       - cp  emr_cluster.yml ./VpcRepo/
-#       - cd VpcRepo
-#       - git add .
-#       - git config --global user.email "yeldandisreedharreddy@gmail.com"
-#       - git config --global user.name "sreedharwissen"
-#       - git commit -m "commit codebuild output artifacts"
-#       - git push origin main
