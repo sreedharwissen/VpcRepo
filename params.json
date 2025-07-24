@@ -4,6 +4,5 @@
 "ReleaseLabel" : "emr-6.5.0",
 "SubnetId" : "subnet-66d1882a",
 "ElasticMapReducePrincipal" : "elasticmapreduce.amazonaws.com",
-"Ec2Principal" : "ec2.amazonaws.com",
-"TagName: : "EMR build"
+"Ec2Principal" : "ec2.amazonaws.com"
 }
